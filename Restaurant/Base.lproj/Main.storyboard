@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIX-1Y-8wQ">
-                                <rect key="frame" x="175" y="199" width="80" height="40.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Хочу есть!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIX-1Y-8wQ">
+                                <rect key="frame" x="135.33333333333331" y="199" width="159.33333333333331" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,7 +33,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="clientActionButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="qLx-4f-bgp"/>
-                                    <segue destination="TUG-a7-TmQ" kind="presentation" id="NHo-uB-tJE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -51,6 +50,7 @@
                     <connections>
                         <outlet property="clientActonButton" destination="Ugg-lP-apc" id="yQS-P2-g0U"/>
                         <outlet property="clientStatusLabel" destination="PIX-1Y-8wQ" id="yxC-x0-7ES"/>
+                        <segue destination="TUG-a7-TmQ" kind="presentation" identifier="openKitchenVC" id="tn0-yX-9wO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -71,6 +71,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Выполнить заказ">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="completeOrderButtonPressed" destination="TUG-a7-TmQ" eventType="touchUpInside" id="T6x-x5-m5M"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wUt-GY-nbR"/>

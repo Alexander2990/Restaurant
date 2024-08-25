@@ -7,12 +7,11 @@
 
 import UIKit
 
-class KitchenViewController: UIViewController {
+final class KitchenViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    
+    @IBAction private func completeOrderButtonPressed() {
+        dismiss(animated: true)
     }
-
+    
+    
 }

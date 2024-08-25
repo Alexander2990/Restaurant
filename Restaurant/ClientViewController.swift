@@ -8,28 +8,30 @@
 import UIKit
 
 // Официант
-
 protocol KitchenViewControllerDelegat: AnyObject {
     func completeOrder()
 }
 
+// Клиент
 final class ClientViewController: UIViewController {
 
-    @IBOutlet var clientStatusLabel: UILabel!
-    @IBOutlet var clientActonButton: UIButton!
+    @IBOutlet private var clientStatusLabel: UILabel!
+    @IBOutlet private var clientActonButton: UIButton!
     
 //    Официант принимает заказ и идет на кухню
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let kitchenVC = segue.destination as! KitchenViewController
         
     }
 
-    @IBAction func clientActionButtonPressed() {
+//    Клиент подзывает официанта
+    @IBAction private func clientActionButtonPressed() {
         if clientActonButton.titleLabel?.text == "Подозвать официанта" {
             clientActonButton.setTitle("Сделать заказ", for: .normal)
             
 //            Официант уточняет готов ли клиент сделать заказ
         } else if clientActonButton.titleLabel?.text == "Сделать заказ" {
-            
+            performSegue(withIdentifier: "openKitchenVC", sender: nil)
         } else if clientActonButton.titleLabel?.text == "Оплатить счет" {
             clientStatusLabel.text = "Хочу есть!"
             clientActonButton.setTitle("Подозвать официанта", for: .normal)
@@ -42,6 +44,7 @@ final class ClientViewController: UIViewController {
 extension ClientViewController: KitchenViewControllerDelegat {
 //    Передача заказа клиенту
     func completeOrder() {
-        
+        clientStatusLabel.text = "Спасибо"
+        clientActonButton.setTitle("Оплатить счет", for: .normal)
     }
 }
