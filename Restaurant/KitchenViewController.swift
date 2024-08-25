@@ -7,9 +7,13 @@
 
 import UIKit
 
+// Кухня
 final class KitchenViewController: UIViewController {
+    
+    weak var delegate: KitchenViewControllerDelegat?
 
     @IBAction private func completeOrderButtonPressed() {
+        delegate?.completeOrder()
         dismiss(animated: true)
     }
     

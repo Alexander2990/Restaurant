@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23090" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23079"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,23 +13,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ClientViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Хочу есть!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIX-1Y-8wQ">
-                                <rect key="frame" x="135.33333333333331" y="199" width="159.33333333333331" height="40.666666666666657"/>
+                                <rect key="frame" x="117.00000000000001" y="199" width="159.33333333333337" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugg-lP-apc">
-                                <rect key="frame" x="92" y="633.33333333333337" width="246" height="40.333333333333371"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="GEr-Vv-DIL"/>
-                                </constraints>
+                                <rect key="frame" x="91" y="578" width="211" height="35.666666666666629"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Подозвать официанта">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="clientActionButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="qLx-4f-bgp"/>
@@ -62,14 +59,14 @@
             <objects>
                 <viewController id="TUG-a7-TmQ" customClass="KitchenViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qeB-dE-gZ2">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1F-dg-bcN">
-                                <rect key="frame" x="118.00000000000001" y="441" width="194.33333333333337" height="40.333333333333314"/>
+                                <rect key="frame" x="112.66666666666669" y="403" width="168" height="36"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Выполнить заказ">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Выполнить заказ" subtitle="">
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="completeOrderButtonPressed" destination="TUG-a7-TmQ" eventType="touchUpInside" id="T6x-x5-m5M"/>
@@ -88,6 +85,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVf-bG-Vcz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="946" y="-28"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TgT-RC-AAm">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Beg-qr-QSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="6hq-fQ-RO1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JX3-BN-rDz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3HX-hE-BFO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1787" y="-21"/>
         </scene>
     </scenes>
     <resources>

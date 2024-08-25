@@ -21,7 +21,7 @@ final class ClientViewController: UIViewController {
 //    Официант принимает заказ и идет на кухню
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let kitchenVC = segue.destination as! KitchenViewController
-        
+        kitchenVC.delegate = self
     }
 
 //    Клиент подзывает официанта
